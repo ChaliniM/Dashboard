@@ -17,7 +17,8 @@ if f1 is not None:
 else:
     default_path = "sample_water_quality_data.csv"
     df = pd.read_csv(default_path)
-    st.info("Using default dataset from local path.")
+    st.info("Using default dataset from GitHub repository.")
+
 if 'Date' in df.columns:
     df['Date'] = pd.to_datetime(df['Date'])
 
