@@ -136,14 +136,14 @@ with st.container():
     
     
 # Scatter plot: Relationship between BOD and pH, using Temperature as point size
+# Scatter plot: Relationship between BOD and pH, using Temperature as point size
 data1 = px.scatter(filtered_df, x='BOD', y='pH', size='Temperature')
 
-# Update the layout and titles using the correct method
+# Safely update layout properties
 data1.update_layout(
-    title='Relationship between BOD and pH using Scatter Plot',
-    titlefont=dict(size=20),
-    xaxis=dict(title='BOD (mg/l)', titlefont=dict(size=19)),
-    yaxis=dict(title='pH', titlefont=dict(size=19))
+    title=dict(text='Relationship between BOD and pH using Scatter Plot', font=dict(size=20)),
+    xaxis_title='BOD (mg/l)',
+    yaxis_title='pH'
 )
 st.subheader(" WQI vs Key Chemical Parameters")
 if all(col in filtered_df.columns for col in ['WQI', 'pH', 'DO', 'BOD']):
