@@ -219,4 +219,4 @@ else:
 # Display the scatter plot in Streamlit
 st.plotly_chart(data1, use_container_width=True)
 scv=df.to_csv(index=False).encode('utf-8')
-st.download_button('Download Data',data=csv,file_name="Data.csv",mime="text/csv")
+st.download_button('Download Data',data=csv,file_name="Data.csv",mime="text/csv") 
